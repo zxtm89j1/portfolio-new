@@ -1,0 +1,15 @@
+.btn-outline-primary {
+--bs-btn-border-color: #eb674b;
+--bs-btn-color: #eb674b;
+--bs-btn-active-bg: #eb674b;
+--bs-btn-active-border-color: #eb674b;
+}
+
+form > input::selection,  form>textarea::selection{
+    background-color: #eb674b;
+    color: white;
+}
+
+nav#nav-mobile-menu {
+    z-index: 100000000000;
+}
