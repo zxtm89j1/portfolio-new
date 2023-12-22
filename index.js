@@ -7,18 +7,14 @@ $(document).ready(function () {
   });
 
   $("#mobile-toggle").on("click", function () {
-    $("#nav-mobile-menu").toggle();
+    $("#mobile-menu-main").toggle();
   });
 
   $("#close").on("click", function () {
-    $("#nav-mobile-menu").toggle();
+    $("#mobile-menu-main").toggle();
   });
 
   $(".link-mobile").on("click", function () {
-    $("#nav-mobile-menu").toggle();
+    $("#mobile-menu-main").toggle();
   });
-
-  
-
-
 });

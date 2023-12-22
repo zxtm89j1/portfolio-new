@@ -28,11 +28,6 @@
     <script>
       tailwind.config = {
         theme: {
-          extend: {
-            colors: {
-              clifford: "#da373d",
-            },
-          },
           fontFamily: {
             raleway: ["Raleway", "sans-serif"],
             roboto: ["Roboto", "sans-serif"],
@@ -66,17 +61,17 @@
             <li
               class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold"
             >
-              Services
+              <a href="#services">Services</a>
             </li>
             <li
               class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold"
             >
-              Works
+              <a href="#projects">Works/ Projects</a>
             </li>
             <li
               class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold"
             >
-              Contact
+              <a href="#contact">Contact</a>
             </li>
           </ul>
           <!-- Mobile menu toggle button -->
@@ -105,52 +100,54 @@
       <!-- 
       mobile menu -->
 
-      <nav
-        id="nav-mobile-menu"
-        class="fixed top-0 bottom-0 left-0 bg-[#222222] w-[80%] hidden p-3"
+      <div
+        class="fixed top-0 bottom-0 left-0 w-[100%] hidden bg-green-200"
+        id="mobile-menu-main"
       >
-        <div class="flex justify-between">
-          <img src="./images/portlogo.webp" alt="logo" class="h-[3rem]" />
-          <div
-            id="close"
-            class="mr-5 font-roboto text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold"
-          >
-            X
+        <nav class="w-[80%] h-[100%] bg-[#222222] p-3">
+          <div class="flex justify-between">
+            <img src="./images/portlogo.webp" alt="logo" class="h-[3rem]" />
+            <div
+              id="close"
+              class="mr-5 font-roboto text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold"
+            >
+              X
+            </div>
           </div>
-        </div>
-        <ul class="md:flex justify-evenly w-[50rem] text-white">
-          <li
-            class="font-roboto text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            <a href="#home">Home</a>
-          </li>
-          <li
-            class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            <a href="#about">About</a>
-          </li>
-          <li
-            class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            <a href="#technologies">Technologies</a>
-          </li>
-          <li
-            class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            Services
-          </li>
-          <li
-            class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            Works
-          </li>
-          <li
-            class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-2"
-          >
-            Contact
-          </li>
-        </ul>
-      </nav>
+          <ul id="list" class="w-[100%] text-white">
+            <li
+              class="font-roboto text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#home">Home</a>
+            </li>
+            <li
+              class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#about">About</a>
+            </li>
+            <li
+              class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#technologies">Technologies</a>
+            </li>
+            <li
+              class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#services">Services</a>
+            </li>
+            <li
+              class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#projects">Works/ Projects</a>
+            </li>
+            <li
+              class="font-roboto cursor-pointer text-[#9d9d9d] hover:text-[#eb674b] hover:font-bold link-mobile my-3"
+            >
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <div
         id="home"
@@ -312,6 +309,7 @@
     </div>
 
     <div
+      id="technologies"
       class="flex flex-col items-center px-5 py-10 text-white bg-[#222222] sm:flex-row sm:justify-center"
     >
       <div
@@ -939,7 +937,10 @@
       </div>
     </div>
 
-    <div class="bg-[#1f1f1f] w-full text-white flex justify-center">
+    <div
+      id="services"
+      class="bg-[#1f1f1f] w-full text-white flex justify-center"
+    >
       <div
         class="w-full md:w-[90%] flex flex-col md:flex-row justify-evenly text-black p-5 md:p-20 items-center"
         data-aos="fade-up"
@@ -1050,7 +1051,7 @@
       </div>
     </div>
 
-    <div class="bg-[#222222] text-white flex justify-center">
+    <div id="projects" class="bg-[#222222] text-white flex justify-center">
       <div
         class="w-[90%] flex flex-col items-center p-0 sm:p-3 lg:p-10"
         data-aos="fade-right"
@@ -1077,7 +1078,7 @@
           >
             <div class="font-raleway text-2xl my-2">KWave Wiz</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/X3Vt0qYMAd4?si=Iho3HF_bSmloOYhv"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1085,9 +1086,10 @@
               class="w-[20rem] my-2"
             ></iframe>
             <div class="flex w-[100%] justify-center mx-20">
-              <a class="mx-5" href=""
-                ><i class="bi bi-link-45deg" class=""></i></a
-              ><a class="mx-5" href="https://github.com/zxtm89j1/k-wizz-fe"
+              <a class="mx-5" href="https://github.com/zxtm89j1/quiz-app-be"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a class="mx-5" href="https://github.com/zxtm89j1/k-wizz-fe"
                 ><i class="bi bi-github"></i
               ></a>
             </div>
@@ -1145,9 +1147,7 @@
               class="w-[20rem] my-2"
             ></iframe>
             <div class="flex w-[100%] justify-center mx-20">
-              <a class="mx-5" href=""
-                ><i class="bi bi-link-45deg" class=""></i></a
-              ><a class="mx-5" href="https://github.com/zxtm89j1/k-wizz-fe"
+              <a class="mx-5" href="https://github.com/zxtm89j1/todoappphp"
                 ><i class="bi bi-github"></i
               ></a>
             </div>
@@ -1170,11 +1170,15 @@
             </div>
             <ul class="mt-3">
               <li class="text-[#9d9d9d] font-roboto">
-                - Dive into the world of K-Pop with our engaging quiz app that
-                combines React's interactive front-end with Laravel's robust
-                back-end. Explore trivia and facts about your favorite K-Pop
-                idols, bands, and more, accompanied by immersive sound effects
-                for an entertaining experience.
+                - YourToDo is a dynamic task management application meticulously
+                crafted with HTML, CSS, and a PHP backend to streamline your
+                organizational needs. The user-friendly interface ensures
+                effortless task creation, modification, and deletion. Leveraging
+                SweetAlert 2 for enhanced user interactions, the app provides
+                visually appealing alerts and confirmations. With a clean and
+                intuitive design, YourToDo facilitates efficient task
+                management, empowering users to stay organized and boost
+                productivity.
               </li>
             </ul>
           </div>
@@ -1184,7 +1188,7 @@
           >
             <div class="font-raleway text-2xl my-2">Babloo Entertainment</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/_w7URb0LYp4?si=PU71IQMqLk8kj--E"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1234,7 +1238,7 @@
           >
             <div class="font-raleway text-2xl my-2">Simple CRUD App</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/362Ynixqy40?si=Gnv6-JkTtf2pyKWq"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1242,11 +1246,9 @@
               class="w-[20rem] my-2"
             ></iframe>
             <div class="flex w-[100%] justify-center mx-20">
-              <a class="mx-5" href="https://zxtm89j1.github.io/"
-                ><i class="bi bi-link-45deg" class=""></i></a
-              ><a
+              <a
                 class="mx-5"
-                href="https://github.com/zxtm89j1/zxtm89j1.github.io"
+                href="https://github.com/zxtm89j1/crud-app-practice"
                 ><i class="bi bi-github"></i
               ></a>
             </div>
@@ -1290,7 +1292,7 @@
           >
             <div class="font-raleway text-2xl my-2">Sidework</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/alpzgN58j1A?si=NPus20j0YL9Bw8mG"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1298,11 +1300,9 @@
               class="w-[20rem] my-2"
             ></iframe>
             <div class="flex w-[100%] justify-center mx-20">
-              <a class="mx-5" href="https://zxtm89j1.github.io/"
+              <a class="mx-5" href="https://zxtm89j1.github.io/sidework/"
                 ><i class="bi bi-link-45deg" class=""></i></a
-              ><a
-                class="mx-5"
-                href="https://github.com/zxtm89j1/zxtm89j1.github.io"
+              ><a class="mx-5" href="https://github.com/zxtm89j1/sidework"
                 ><i class="bi bi-github"></i
               ></a>
             </div>
@@ -1342,7 +1342,7 @@
           >
             <div class="font-raleway text-2xl my-2">PyPassword</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/IxqodvF3ONk?si=QKYHGlBCXGe-2sDQ"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1393,7 +1393,7 @@
           >
             <div class="font-raleway text-2xl my-2">Simple Calculator</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/4yPLlXZG_Xs?si=h8DdzjJUrU_XmO1m"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1435,7 +1435,7 @@
           >
             <div class="font-raleway text-2xl my-2">Clinical Care System</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/ZTc3a2_Zjgc?si=P68VZMnVQLaqo9Iz"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1478,9 +1478,9 @@
           <div
             class="p-2 w-[25rem] flex flex-col justify-center items-center mx-5 bg-[#1f1f1f]"
           >
-            <div class="font-raleway text-2xl my-2">Site Audit</div>
+            <div class="font-raleway text-2xl my-2">Site Assessment (SEO)</div>
             <iframe
-              src="https://www.youtube.com/embed/3CsOY1Cuf00?si=NMztWh1ho7AtJBYg"
+              src="https://www.youtube.com/embed/K-6PngplxTY?si=1EBpr0x1zdMEm97M"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -1523,7 +1523,7 @@
       </div>
     </div>
 
-    <div class="bg-[#1f1f1f] flex flex-col items-center">
+    <div id="contact" class="bg-[#1f1f1f] flex flex-col items-center">
       <!-- red background -->
       <div
         class="w-full md:w-[90%] lg:w-[80%] flex flex-col md:flex-row justify-evenly items-center p-10 md:p-20"

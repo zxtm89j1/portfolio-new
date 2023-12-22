@@ -10,6 +10,14 @@ form > input::selection,  form>textarea::selection{
     color: white;
 }
 
-nav#nav-mobile-menu {
+#mobile-menu-main {
     z-index: 100000000000;
+}
+
+#mobile-menu-main {
+    background-color: rgba(107, 114, 128, 0.5);;
+}
+
+ul#list > li {
+    width: fit-content;
 }
